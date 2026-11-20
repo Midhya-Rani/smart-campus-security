@@ -1,0 +1,4 @@
+MIDHYA - Database + Models + Main app + shared base files
+Your files: campus/database.py, campus/models.py, main.py, README.md
+Shared base files (only you upload these): campus/gui.py, campus/__init__.py, requirements.txt, .gitignore, sample_videos/README.txt
+In gui.py later ONLY edit: _tab_dashboard, _tab_alerts, _tab_history

@@ -1,0 +1,39 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# IDE settings
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Build files
+build/
+dist/
+# Database
+*.db
+*.sqlite3
+
+# AI model weights
+*.pt
+*.pth
+
+# Sample videos (if large or copyrighted)
