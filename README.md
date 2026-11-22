@@ -31,3 +31,10 @@ The first run with a video downloads the `yolov8n.pt` model automatically.
 ## Responsible use
 No face recognition. Person detection is not proof of wrongdoing - alerts must be reviewed by a human. Use only authorized videos.
 The ML classifier is trained on synthetic data (demo of the workflow only).
+
+## Team Members
+| Member | Responsibility |
+|--------|----------------|
+| Sherbaz | Data structures (linked list, queue, priority queue) and graph algorithms (BFS, DFS, A*) |
+| Muskan | YOLO person detection, rule engine, ML classifier |
+| Midhya | SQLite database, data models, main application and dashboard |
