@@ -1,4 +1,4 @@
-MIDHYA - Database + Models + Main app + shared base files
-Your files: campus/database.py, campus/models.py, main.py, README.md
-Shared base files (only you upload these): campus/gui.py, campus/__init__.py, requirements.txt, .gitignore, sample_videos/README.txt
-In gui.py later ONLY edit: _tab_dashboard, _tab_alerts, _tab_history
+MUSKAN - AI Detection + Rules + ML
+Files: campus/detector.py, campus/rules.py, campus/classifier.py, tests/test_rules_db.py
+In campus/gui.py ONLY edit: _tab_video and _tab_rules
+Ideas: improve YOLO detection/drawing, rule engine, classifier, explain AI part in report.
