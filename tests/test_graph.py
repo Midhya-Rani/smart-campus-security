@@ -42,6 +42,20 @@ class TestGraph(unittest.TestCase):
         with self.assertRaises(KeyError):
             self.g.bfs_order("Nowhere")
 
+    def test_add_path_validation(self):
+        with self.assertRaises(KeyError):
+            self.g.add_path("Main Gate", "Unknown Place")
 
+        with self.assertRaises(TypeError):
+            self.g.add_path("Main Gate", "Library", "far")
+
+        with self.assertRaises(ValueError):
+            self.g.add_path("Main Gate", "Library", -5)
+
+        with self.assertRaises(ValueError):
+            self.g.add_path("Main Gate", "Library", float("inf"))
+
+        with self.assertRaises(ValueError):
+            self.g.add_path("Main Gate", "Library", float("nan"))    
 if __name__ == "__main__":
     unittest.main()

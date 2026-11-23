@@ -71,8 +71,18 @@ class CampusGraph:
         self.pos[name] = (x, y)
 
     def add_path(self, a: str, b: str, weight: Optional[float] = None) -> None:
+        """Add a walking path after validating its locations and distance."""
+        self._check(a, b)
+
         if weight is None:
             weight = round(self._euclid(a, b), 1)
+
+        if isinstance(weight, bool) or not isinstance(weight, (int, float)):
+            raise TypeError("Path weight must be a number")
+
+        if not math.isfinite(weight) or weight < 0:
+            raise ValueError("Path weight must be finite and non-negative")
+
         self.g.add_edge(a, b, weight=weight)
 
     # ---- helpers --------------------------------------------------------
