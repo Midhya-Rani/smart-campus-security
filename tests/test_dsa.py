@@ -16,7 +16,7 @@ class TestLinkedList(unittest.TestCase):
         self.assertEqual(ll.to_list(), [1, 2, 3, 4, 5])
         self.assertEqual(ll.delete_at(0), 1)
         self.assertEqual(ll.delete_at(3), 5)
-        ll.append(9)                       # tail pointer must still be valid
+        ll.append(9)
         self.assertEqual(ll.to_list(), [2, 3, 4, 9])
         self.assertEqual(len(ll), 4)
         self.assertEqual(ll.last(2), [4, 9])
@@ -25,6 +25,19 @@ class TestLinkedList(unittest.TestCase):
         with self.assertRaises(IndexError):
             LinkedList().delete_at(0)
 
+    def test_last_edge_cases(self):
+        ll = LinkedList()
+
+        self.assertEqual(ll.last(3), [])
+        self.assertEqual(ll.last(0), [])
+        self.assertEqual(ll.last(-2), [])
+
+        for value in [10, 20, 30, 40, 50]:
+            ll.append(value)
+
+        self.assertEqual(ll.last(2), [40, 50])
+        self.assertEqual(ll.last(5), [10, 20, 30, 40, 50])
+        self.assertEqual(ll.last(10), [10, 20, 30, 40, 50])
 
 class TestQueue(unittest.TestCase):
     def test_fifo(self):

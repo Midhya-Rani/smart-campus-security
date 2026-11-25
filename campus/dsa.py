@@ -96,9 +96,25 @@ class LinkedList:
         return list(self)
 
     def last(self, n: int) -> List[Any]:
-        """Return the last n items (oldest first)."""
-        items = self.to_list()
-        return items[-n:] if n > 0 else []
+        """Return the last n items in their original order."""
+        if n <= 0:
+            return []
+
+        if n >= self._size:
+            return self.to_list()
+
+        start_index = self._size - n
+        result = []
+
+        node = self.head
+        for _ in range(start_index):
+            node = node.next
+
+        while node is not None:
+            result.append(node.value)
+            node = node.next
+
+        return result
 
 
 class Queue:
