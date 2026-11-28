@@ -9,7 +9,7 @@ import heapq
 import itertools
 from typing import Any, Iterator, List, Optional
 
-from .models import Alert
+from models import Alert
 
 
 class _Node:

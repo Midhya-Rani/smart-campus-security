@@ -1,7 +1,7 @@
 import unittest
 
 from campus.dsa import AlertManager, LinkedList, PriorityQueue, Queue
-from campus.models import Alert
+from models import Alert
 
 
 def mk(i, sev):
