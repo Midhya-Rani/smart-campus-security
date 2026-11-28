@@ -6,10 +6,10 @@
 import argparse
 from datetime import datetime
 
-from campus.classifier import EventClassifier
+from classifier import EventClassifier
 from campus.dsa import AlertManager
 from campus.graph import CampusGraph
-from campus.rules import DEFAULT_RULES, RuleEngine
+from rules import DEFAULT_RULES, RuleEngine
 
 
 def demo() -> None:

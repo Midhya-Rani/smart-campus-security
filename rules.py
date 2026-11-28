@@ -7,7 +7,7 @@ from dataclasses import dataclass
 from datetime import datetime, time
 from typing import Dict, List, Optional
 
-from .models import Alert
+from models import Alert
 
 
 def parse_time(text: str) -> time:
