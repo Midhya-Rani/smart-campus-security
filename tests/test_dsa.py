@@ -20,6 +20,17 @@ class TestLinkedList(unittest.TestCase):
         self.assertEqual(ll.to_list(), [2, 3, 4, 9])
         self.assertEqual(len(ll), 4)
         self.assertEqual(ll.last(2), [4, 9])
+    def test_last_returns_independent_list(self):
+        ll = LinkedList()
+
+        for value in [10, 20, 30]:
+            ll.append(value)
+
+        result = ll.last(2)
+        result.append(40)
+
+        self.assertEqual(result, [20, 30, 40])
+        self.assertEqual(ll.to_list(), [10, 20, 30]) 
 
     def test_index_errors(self):
         with self.assertRaises(IndexError):
